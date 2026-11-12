@@ -17,5 +17,6 @@ Chỉ gửi 2 tệp này nếu giảng viên yêu cầu nộp báo cáo DOCX. Kh
 - `02_Nguon/02_GiuaKy/`: bài báo, dữ liệu và minh chứng dùng cho báo cáo giữa kỳ.
 - `02_Nguon/03_DeVaMau/`: đề và mẫu dùng để đối chiếu.
 - `03_MaVaSoLieu/`: mã nguồn, hình, CSV và tệp kiểm tra dùng để giải thích hoặc tái lập phần giữa kỳ.
+- `04_QuanLyNguon/QuanLy_Nguon_PPNCKH.xlsx`: bảng Excel quản lý DOI, nguồn nhà xuất bản, link tra cứu Scopus/WoS và nguồn dữ liệu.
 
 Các bản PDF xuất trước đây không được đưa vào thư mục này để tránh nhầm bản cũ với DOCX hiện hành.
