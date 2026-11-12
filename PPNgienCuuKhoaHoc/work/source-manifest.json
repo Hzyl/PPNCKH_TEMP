@@ -1,0 +1,57 @@
+[
+  {
+    "file": "paper.pdf",
+    "url": "https://mdpi-res.com/d_attachment/data/data-07-00146/article_deploy/data-07-00146.pdf",
+    "final_url": "https://mdpi-res.com/d_attachment/data/data-07-00146/article_deploy/data-07-00146.pdf",
+    "content_type": "application/pdf",
+    "bytes": 6572720,
+    "sha256": "1be95db77df7714e2b0783811c414895150c45cee6bbd8a79d6bd61b3a2185fb"
+  },
+  {
+    "file": "paper.html",
+    "url": "https://www.mdpi.com/2306-5729/7/11/146",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "crossref.json",
+    "url": "https://api.crossref.org/works/10.3390/data7110146",
+    "final_url": "https://api.crossref.org/works/10.3390/data7110146",
+    "content_type": "application/json",
+    "bytes": 10808,
+    "sha256": "d7a4d466fcf65cfe628c3c6e429c0c0bc19f090868e82fc5cbb63964356dfc2f"
+  },
+  {
+    "file": "dataset.zip",
+    "url": "https://archive.ics.uci.edu/static/public/697/predict+students+dropout+and+academic+success.zip",
+    "final_url": "https://archive.ics.uci.edu/static/public/697/predict+students+dropout+and+academic+success.zip",
+    "content_type": null,
+    "bytes": 533344,
+    "sha256": "e90e55fd65ec462ae283ebeb2cca409319e3460ed898d8754f62fb35cc83a65d"
+  },
+  {
+    "file": "uci.html",
+    "url": "https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success",
+    "final_url": "https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success",
+    "content_type": "text/html",
+    "bytes": 592553,
+    "sha256": "d9f7e54c09dbb15bd76a238c348d63cc93196689da7584c75b4182b9cd3e2787"
+  },
+  {
+    "file": "journal-indexing.html",
+    "url": "https://www.mdpi.com/journal/data/indexing",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "journal.html",
+    "url": "https://www.mdpi.com/journal/data",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "mau-thuyet-minh.docx",
+    "url": "https://drive.google.com/uc?export=download&id=1fCjJPgMqbIlt4Wm_iBOtdzIx2Ui7pXFZ",
+    "final_url": "https://drive.usercontent.google.com/download?id=1fCjJPgMqbIlt4Wm_iBOtdzIx2Ui7pXFZ&export=download",
+    "content_type": "application/octet-stream",
+    "bytes": 149939,
+    "sha256": "cdf01e5b3159dd308fbf7c7558d87715df784f225c2e7b409c222ebd3647cb2b"
+  }
+]

@@ -1,0 +1,136 @@
+"""Nội dung học thuật của báo cáo giữa kỳ; số liệu do mã phân tích cung cấp."""
+def P(text):
+    return {"type": "p", "text": text}
+
+def H(text):
+    return {"type": "h", "text": text, "level": 2}
+
+def T(caption, headers, rows):
+    return {"type": "table", "caption": caption, "headers": headers, "rows": rows}
+
+def F(name, caption):
+    return {"type": "figure", "name": name, "caption": caption}
+
+TITLE = "Phân tích nghiên cứu dự báo sinh viên bỏ học và tái tạo các hình từ dữ liệu công khai"
+
+def content(audit):
+    groups = []
+    for row in audit["bins"]:
+        groups.append([row["passed_units"], str(row["n"]), str(row["dropout"]),
+                       f"{row['proportion'] * 100:.2f}%".replace(".", ","),
+                       f"{row['ci_low'] * 100:.2f}–{row['ci_high'] * 100:.2f}%".replace(".", ",")])
+    return [
+        ("Tóm tắt", [
+            P("Báo cáo phân tích bài Predicting Student Dropout and Academic Success của Realinho và cộng sự [1], tập trung vào nguồn dữ liệu, quy trình hình thành dữ liệu và ý nghĩa của các kết quả mô tả đối với bài toán học máy. Nhóm tái dựng sơ đồ quy trình và biểu đồ phân bố nhãn, sau đó xây dựng một hình mới về tỷ lệ Dropout theo số học phần đạt trong học kỳ thứ nhất từ bộ dữ liệu UCI 697 [2]."),
+            P("Kết quả kiểm tra dữ liệu cho thấy 4.424 hồ sơ gồm 1.421 Dropout, 794 Enrolled và 2.209 Graduate. Phân tích bổ sung ghi nhận tỷ lệ Dropout là 79,39% trong nhóm không có học phần đạt, so với 10,23% trong nhóm đạt từ sáu học phần. Đây là mối liên hệ trong dữ liệu quan sát, chưa phải tác động nhân quả hoặc kết quả dự báo đã kiểm định. Bài báo gốc là một Data Descriptor; đóng góp chính là dữ liệu và phân tích khám phá, không phải bảng xếp hạng độ chính xác của các mô hình."),
+            P("Từ khóa: khai phá dữ liệu giáo dục; dự báo bỏ học; dữ liệu công khai; mất cân bằng lớp; tái lập nghiên cứu.")
+        ]),
+        ("1 Thông tin bài báo và căn cứ lựa chọn", [
+            T("Bảng 1. Thông tin thư mục đã đối chiếu với bài báo và Crossref", ["Mục", "Thông tin"], [
+                ["Tên bài báo", "Predicting Student Dropout and Academic Success"],
+                ["Tác giả", "Valentim Realinho; Jorge Machado; Luís Baptista; Mónica V. Martins"],
+                ["Tạp chí và năm", "Data, tập 7, số 11, bài 146, năm 2022; công bố ngày 28/10/2022"],
+                ["Nhà xuất bản và ISSN", "MDPI; eISSN 2306-5729"],
+                ["DOI", "10.3390/data7110146; https://doi.org/10.3390/data7110146"],
+                ["Loại công bố", "Data Descriptor; 17 trang; giấy phép CC BY 4.0"],
+                ["Dữ liệu công khai", "Bài báo dẫn Zenodo DOI 10.5281/zenodo.5777339; báo cáo tính lại trên bản UCI DOI 10.24432/C5MC89"]
+            ]),
+            P("Bài báo phù hợp lĩnh vực Công nghệ thông tin vì trình bày thu thập và tiền xử lý dữ liệu, trực quan hóa, phân loại có giám sát và đánh giá mức quan trọng của đặc trưng. Chủ đề giáo dục là miền ứng dụng; phần phương pháp thuộc khai phá dữ liệu và học máy. Lợi thế khi chọn công trình này là có toàn văn và bảng dữ liệu công khai để đối chiếu số liệu, thay vì ước lượng các cột từ ảnh."),
+            H("1.1 Chỉ mục và chỉ số tạp chí"),
+            P("Hồ sơ serial metadata chính thức của Elsevier xác nhận tạp chí Data, eISSN 2306-5729 và liên kết Scopus source ID 21100924372 [3]. Lịch sử tạp chí do MDPI công bố ghi Data được đưa vào Scopus năm 2019, bao phủ từ tập 1 số 1; đồng thời được đưa vào Emerging Sources Citation Index (ESCI) thuộc Web of Science từ năm 2017, bắt đầu tập 2 số 1 [4]. Bài được chọn ở tập 7 năm 2022 nằm trong khoảng xuất bản sau các mốc này. Bằng chứng ở đây là hồ sơ nguồn tạp chí, không phải một truy vấn riêng mã bản ghi của bài báo."),
+            P("CiteScore năm 2019 của Data là 2,1, được công bố năm 2020 theo lịch sử tạp chí [4]. Báo cáo dùng giá trị có năm tham chiếu xác định này; không gọi đây là chỉ số năm 2022 hoặc chỉ số hiện hành. Chỉ mục và chỉ số phản ánh thông tin của tạp chí, không thay thế đánh giá tính hợp lý của phương pháp trong từng bài."),
+            H("1.2 Lĩnh vực và đối chiếu nguồn phân loại"),
+            P("Hồ sơ SCImago của Data, source ID 21100924372 [6], phân loại tạp chí trong hai lĩnh vực: Computer Science, gồm Computer Science Applications và Information Systems; Decision Sciences, gồm Information Systems and Management. Thông tin được đối chiếu bằng ảnh phần Subject Area and Category của hồ sơ, lưu kèm nguồn ngày 22/10/2026. Trang thống kê của MDPI [5] cũng liệt kê ba nhóm ngành tương ứng cho CiteScore. Bài báo được chọn thuộc hướng ứng dụng học máy và hệ thống thông tin trong giáo dục; đây là phân loại chủ đề bài báo của nhóm dựa trên nội dung, còn SCImago phân loại ở cấp tạp chí.")
+        ]),
+        ("2 Bối cảnh và vấn đề nghiên cứu", [
+            P("Theo bài báo [1, tr. 1–2], bỏ học gây tổn thất cho người học và cơ sở đào tạo; dữ liệu học tập có thể hỗ trợ phát hiện những sinh viên cần được quan tâm. Tuy nhiên, dữ liệu hành chính thường nằm ở nhiều hệ thống rời nhau, có cấu trúc và mục đích thu thập khác nhau. Vấn đề trước khi xây dựng mô hình là tạo được một bộ dữ liệu nhất quán, có định nghĩa đầu vào và đầu ra đủ rõ để các nghiên cứu sau có thể sử dụng."),
+            P("Khoảng trống mà công trình giải quyết chủ yếu là nhu cầu về dữ liệu thực tế, công khai và có mô tả để nghiên cứu kết quả học tập. Tác giả hợp nhất thông tin tuyển sinh, nhân khẩu học, kinh tế xã hội, kinh tế vĩ mô và thành tích hai học kỳ. Nhóm không diễn giải khoảng trống này thành tuyên bố rằng trước đó chưa từng có nghiên cứu dự báo bỏ học."),
+            P("Mục tiêu của tác giả là giới thiệu bộ dữ liệu có thể dùng cho nghiên cứu so sánh và đào tạo học máy, giải thích cách chuẩn bị dữ liệu và phân tích một số tính chất cần chú ý. Bài không nêu hệ giả thuyết kiểm định hoặc danh sách câu hỏi RQ riêng. Từ cấu trúc bài, nhóm diễn giải ba câu hỏi phục vụ đọc hiểu: dữ liệu được hợp nhất và gắn nhãn ra sao; phân bố lớp và tương quan có gì đáng chú ý; đặc trưng nào được các mô hình xem là hữu ích? Đây là cách hệ thống hóa của nhóm, không phải trích nguyên văn câu hỏi của tác giả."),
+            P("Đối tượng là các bản ghi sinh viên thuộc 17 chương trình đại học tại Polytechnic Institute of Portalegre, Bồ Đào Nha, trong các năm học 2008/09–2018/19 [1]. Nhãn được xác định ở cuối thời lượng thông thường của khóa học: ba năm, riêng Điều dưỡng bốn năm. Dropout được hiểu ở cấp cơ sở/chương trình; người chuyển trường hoặc chuyển hướng học tập không nhất thiết rời khỏi toàn bộ hệ thống giáo dục đại học. Enrolled chỉ trạng thái vẫn theo học ở mốc quan sát, không đồng nghĩa với sẽ tốt nghiệp hoặc sẽ bỏ học.")
+        ]),
+        ("3 Dữ liệu phương pháp và chỉ số phân tích", [
+            H("3.1 Nguồn dữ liệu và phiên bản"),
+            P("Bài báo mô tả nguồn hồ sơ và kết quả học tập từ hệ thống quản lý đào tạo AMS, dữ liệu tuyển sinh từ CNAES/DGES và dữ liệu vĩ mô từ PORDATA. Tác giả dùng VBA để trích xuất các tệp tuyển sinh dạng Access; các bước tiếp theo sử dụng Python. Dữ liệu đã được ẩn danh trước khi công bố. Theo phần 3.3 của bài, công bố dữ liệu được cán bộ bảo vệ dữ liệu của cơ sở xem xét và tác giả nêu tuân thủ các nguyên tắc FAIR [1]."),
+            T("Bảng 2. Phân biệt mô tả trong bài và tệp được dùng để tính lại", ["Đặc điểm", "Bài báo năm 2022", "Tệp UCI được kiểm tra"], [
+                ["Số bản ghi", "4.424", "4.424"],
+                ["Số biến", "35 cột kể cả Target", "37 cột kể cả Target"],
+                ["Biến đầu vào", "34 biến", "36 biến"],
+                ["Khác biệt thấy trong danh mục", "Không liệt kê hai biến điểm bổ sung", "Có Previous qualification (grade) và Admission grade"],
+                ["Giá trị thiếu và trùng dòng", "Tác giả mô tả đã xử lý dữ liệu", "0 ô rỗng; 0 dòng trùng hoàn toàn"],
+                ["Nguồn tính ba hình", "Sơ đồ và số đếm làm căn cứ", "Đếm Target và tính hình mới từ CSV"]
+            ]),
+            P("Tệp được nạp bằng dấu phân cách chấm phẩy, giữ nguyên dữ liệu và chỉ bỏ khoảng trắng thừa ở tên cột. Số lượng biến không được đánh đồng giữa hai phiên bản. Việc số đếm ba lớp trùng bài báo hỗ trợ đối chiếu Figure 2, nhưng không đủ chứng minh từng dòng và mọi mã phân loại trong hai phiên bản giống hệt nhau. Không áp nguyên các mã ngành 1–17 của phụ lục bài báo vào các mã ngành số trong UCI nếu chưa có bảng ánh xạ."),
+            H("3.2 Nhóm biến và quy trình"),
+            T("Bảng 3. Nhóm đầu vào và ý nghĩa đối với thiết kế nghiên cứu", ["Nhóm", "Ví dụ", "Điểm cần chú ý"], [
+                ["Tuyển sinh", "Course, Application mode, Previous qualification", "Mã danh mục không phải đại lượng liên tục; nên mã hóa phù hợp"],
+                ["Nhân khẩu và gia đình", "Age at enrollment, Gender, nghề nghiệp cha mẹ", "Đọc đúng mã; xem xét nguy cơ đại diện gián tiếp và tính công bằng"],
+                ["Kinh tế xã hội", "Debtor, Tuition fees up to date, Scholarship holder", "Cần biết thời điểm ghi nhận trước khi dùng cho dự báo sớm"],
+                ["Kết quả học tập", "Số học phần đăng ký, đạt, điểm và số lần đánh giá của mỗi học kỳ", "Biến học kỳ 2 không có sẵn tại nhập học hoặc cuối học kỳ 1"],
+                ["Kinh tế vĩ mô", "Unemployment rate, Inflation rate, GDP", "Bối cảnh chung; không đồng nhất với tình trạng riêng từng sinh viên"]
+            ]),
+            P("Quy trình nghiên cứu gồm tạo dữ liệu, phân tích mô tả, xem mất cân bằng lớp, phân tích tương quan Pearson và đánh giá mức quan trọng bằng hoán vị đặc trưng. Bài báo sử dụng Random Forest, XGBoost, LightGBM và CatBoost trong phân tích permutation importance; khi một cột bị xáo trộn làm F1 giảm, mô hình đang dựa vào thông tin ở cột đó. Cách diễn giải này phụ thuộc mô hình, tập dữ liệu và tương quan với các biến khác, không chứng minh quan hệ nhân quả [1, mục 3.2.4]."),
+            H("3.3 Chỉ số được dùng và giới hạn báo cáo"),
+            P("Các bảng mô tả trình bày phân bố, giá trị trung tâm, độ phân tán và miền giá trị. Pearson được dùng để xem liên hệ tuyến tính giữa các cặp biến; Table 9 liệt kê các cặp có hệ số lớn hơn 0,7. Với các mã phân loại danh nghĩa, hệ số Pearson phụ thuộc cách gán mã nên cần diễn giải thận trọng. F1 được dùng trong đánh giá permutation importance vì dữ liệu mất cân bằng."),
+            P("Với một lớp được xem là dương, precision = TP/(TP+FP), recall = TP/(TP+FN), F1 = 2 × precision × recall/(precision+recall). TP là dự đoán đúng lớp đang xét; FP là dự đoán nhầm vào lớp đó; FN là bỏ sót lớp đó. F1 của nhiều lớp cần chỉ rõ macro, micro hoặc weighted. Phần mô tả của bài chưa đủ chi tiết để tái lập toàn bộ giao thức huấn luyện và biến thể F1 từ chính báo cáo này; nhóm không tự điền tỷ lệ chia tập, siêu tham số hoặc điểm dự báo chưa được công bố."),
+            P("Những kỹ thuật SMOTE, ADASYN và các ensemble cân bằng được bài báo nêu như các lựa chọn xử lý mất cân bằng. Việc tác giả nhắc đến chúng không có nghĩa bài đã thực nghiệm và chứng minh một kỹ thuật trong số đó tốt nhất. Báo cáo giữa kỳ thực hiện tái tạo hình và phân tích mô tả, không nhận mình đã tái huấn luyện bốn mô hình.")
+        ]),
+        ("4 Kết quả chính và cách diễn giải", [
+            P("Kết quả cốt lõi của bài là bộ dữ liệu công khai với quy trình hợp nhất được mô tả. Các lớp có quy mô không bằng nhau: Graduate khoảng 50%, Dropout khoảng 32%, Enrolled khoảng 18%. Một bộ phân loại luôn chọn Graduate đã có accuracy 2.209/4.424 = 49,93%, dù không phát hiện được bất kỳ Dropout nào. Đây là phép tính đối chứng của nhóm từ số đếm, không phải kết quả huấn luyện của tác giả."),
+            P("Table 9 của bài ghi hệ số tương quan 0,9040 giữa số học phần đạt ở học kỳ 1 và học kỳ 2; 0,8372 giữa điểm học kỳ 1 và học kỳ 2 [1, tr. 10]. Điều này gợi ý sự trùng lặp thông tin giữa các học kỳ và nhu cầu kiểm soát đa cộng tuyến ở mô hình phù hợp. Không thể suy từ tương quan đó rằng một giá trị học kỳ 2 đã được biết tại học kỳ 1."),
+            P("Qua Figure 5, tác giả nhận thấy năm đặc trưng cùng xuất hiện trong nhóm quan trọng của cả bốn mô hình: số học phần đạt học kỳ 2, số học phần đạt học kỳ 1, điểm học kỳ 2, ngành học và trạng thái đóng học phí [1, tr. 10–11]. Đây là sự đồng thuận về nhóm đặc trưng, không phải bằng chứng về một thuật toán có độ chính xác cao nhất. Giá trị học kỳ 2 và thời điểm ghi nhận học phí cũng làm rõ vì sao một kết quả phân loại hồi cứu chưa tự động trở thành hệ thống cảnh báo sớm."),
+            P("Nhóm đánh giá đóng góp của bài theo mục tiêu Data Descriptor: nguồn dữ liệu và phân tích khám phá có giá trị cho nghiên cứu sau. Hạn chế về mô tả thí nghiệm không phủ nhận đóng góp dữ liệu, nhưng giới hạn khả năng tái lập tuyệt đối hoặc so sánh các mô hình chỉ bằng bài này.")
+        ]),
+        ("5 Tái tạo hình thứ nhất về quy trình dữ liệu", [
+            P("Hình gốc được chọn là Figure 1 tại trang 4, mục 3.1 của bài báo [1]. Mục đích là giải thích đường đi từ các hệ thống rời nhau tới bộ dữ liệu cuối cùng. Thông tin được thể hiện gồm bốn bước xử lý, nguồn tuyển sinh CNAES, hồ sơ và kết quả từ AMS, dữ liệu vĩ mô PORDATA, cùng công cụ VBA/Python."),
+            F("hinh_1_quy_trinh", "Hình 1. Quy trình tạo dữ liệu do nhóm vẽ lại theo Figure 1 và phần giải thích trên trang 4 của [1]."),
+            P("Cách tái tạo: nhóm đọc sơ đồ gốc và mô tả ngay bên dưới, rồi dùng Python/ReportLab vẽ các khối, mũi tên và nhãn tiếng Việt. Bốn bước chính được đánh số; nguồn PORDATA được đặt thành khối phụ nối tới bước hợp nhất. Số 13.992 dòng, 398 cột là quy mô hồ sơ AMS ban đầu, không phải số dòng của dữ liệu công khai cuối cùng. Các chi tiết số lượng được lấy từ văn bản bài báo, không đo hoặc ước lượng từ ảnh."),
+            P("Điểm giống là giữ đủ bốn bước và các nguồn tương ứng, cùng luồng chuẩn bị tuyển sinh → hồ sơ → đánh giá → hợp nhất. Điểm khác là bố trí thành hai cột và một khối tổng hợp, dịch chú thích, bổ sung quy mô dữ liệu và đầu ra. Hình gốc phân vùng VBA/Python bằng khung nét đứt; bản vẽ lại thể hiện công cụ ngay trong khối. Các thay đổi nhằm làm rõ nội dung trên trang A4, không thay thế quy trình bằng một quy trình thu thập mới."),
+            P("Ý nghĩa khoa học: dữ liệu cho học máy là sản phẩm của chuỗi quyết định lọc, chọn biến và gắn nhãn. Khi áp dụng ở cơ sở khác, cần kiểm tra khả năng thu thập và định nghĩa tương đương của từng nguồn. Từ sơ đồ không thể kết luận thuật toán dự báo chính xác đến mức nào hoặc dữ liệu đã đại diện cho tất cả sinh viên.")
+        ]),
+        ("6 Tái tạo hình thứ hai về phân bố nhãn", [
+            P("Hình gốc là Figure 2 tại trang 7, mục 3.2.2 của [1]. Hình biểu diễn tần số của Target để minh họa mất cân bằng ba lớp. Nhóm đếm lại Target trong CSV bằng Counter, kiểm tra tổng 4.424, rồi vẽ biểu đồ thanh ngang với trục số hồ sơ bắt đầu từ 0. Mỗi thanh có cả số lượng và tỷ lệ, không dùng ảnh chụp của bài báo."),
+            F("hinh_2_phan_bo", "Hình 2. Phân bố nhãn vẽ lại theo Figure 2 của [1], số đếm đối chiếu với dữ liệu UCI [2]."),
+            T("Bảng 4. Đối chiếu số đếm dùng vẽ Hình 2", ["Nhãn", "Bài báo", "CSV tính lại", "Tỷ lệ"], [["Graduate", "2.209", "2.209", "49,93%"], ["Dropout", "1.421", "1.421", "32,12%"], ["Enrolled", "794", "794", "17,95%"], ["Tổng", "4.424", "4.424", "100,00%"]]),
+            P("Các số đếm khớp hoàn toàn. Tỷ lệ ở phần mô tả của tác giả được làm tròn 50%, 32%, 18%; bản tái tạo dùng hai chữ số thập phân từ cùng mẫu số. Bản gốc dùng cột đứng theo thứ tự Graduate–Dropout–Enrolled; bản mới đổi sang thanh ngang và thứ tự Dropout–Enrolled–Graduate. Chiều dài vẫn tỉ lệ thuận số đếm và trục gốc bằng 0, nên thông điệp về quy mô không thay đổi."),
+            P("Graduate nhiều gấp khoảng 2,78 lần Enrolled. Do đó chỉ báo cáo accuracy có thể che khuất lỗi ở lớp nhỏ. Kết luận hợp lý là cần chỉ số theo lớp và macro-F1 cùng đối chứng lớp đa số. Hình không cho biết trường hợp nào bị nhầm, không đủ chọn ngưỡng cảnh báo và không chứng minh dùng SMOTE sẽ làm kết quả tốt hơn.")
+        ]),
+        ("7 Hình mới về kết quả học kỳ thứ nhất", [
+            H("7.1 Câu hỏi bổ sung và cách xây dựng"),
+            P("Figure 2 của bài mô tả tỷ lệ chung; Figure 3 phân nhóm theo ngành và một số đặc điểm cá nhân, còn Figure 5 mô tả mức quan trọng của biến. Nhóm đề xuất nhìn trực tiếp tỷ lệ Dropout theo số học phần đạt học kỳ 1, bổ sung mẫu số và khoảng bất định. Hình này không xuất hiện trong năm hình của bài gốc."),
+            P("Dữ liệu gồm Curricular units 1st sem (approved) và Target trong UCI [2]. Nhóm chia thành bốn khoảng 0, 1–2, 3–5 và từ 6 học phần trở lên để dễ đọc; ngưỡng là lựa chọn mô tả, không phải ranh giới cảnh báo đã tối ưu hoặc được nhà trường ban hành. Mọi bản ghi thuộc đúng một nhóm. Với nhóm g, n là số bản ghi mang bất kỳ nhãn nào; k là số mang nhãn Dropout; tỷ lệ p = k/n."),
+            F("hinh_3_moi", "Hình 3. Hình mới do nhóm tính và vẽ từ UCI 697 [2]; các vạch thể hiện khoảng Wilson 95%."),
+            T("Bảng 5. Số liệu chi tiết của Hình 3", ["Học phần đạt", "Tổng n", "Dropout k", "Tỷ lệ k/n", "Wilson 95%"], groups),
+            P("Nhóm dùng khoảng Wilson thay cho khoảng đối xứng p ± 1,96√(p(1−p)/n). Với z = 1,959964 và d = 1+z²/n, tâm là (p+z²/(2n))/d; bán kính là z√(p(1−p)/n+z²/(4n²))/d. Hai cận là tâm trừ/cộng bán kính. Đây là công thức dùng trong mã nguồn [7]. Khoảng mô tả độ bất định nhị thức nếu coi các bản ghi là mẫu độc lập từ một quần thể tương tự; các tỷ lệ trên chính bộ dữ liệu hữu hạn là số mô tả đã biết, không có sai số đếm."),
+            H("7.2 Diễn giải và giá trị bổ sung"),
+            P("Nhóm đạt 0 học phần có 570/718 hồ sơ Dropout (79,39%); nhóm 1–2 là 205/287 (71,43%); nhóm 3–5 là 442/1.425 (31,02%); nhóm từ 6 trở lên là 204/1.994 (10,23%). Khoảng Wilson của nhóm 1–2 rộng hơn các nhóm lớn, giúp người đọc tránh xem tất cả điểm ước lượng có độ chắc chắn như nhau. Tỷ lệ giảm theo các nhóm đã chọn, nhưng đây là kết quả phân nhóm quan sát và không đo tác động của việc buộc một sinh viên học thêm học phần."),
+            P("Hình mới bổ sung cho bài gốc bằng cách chuyển một phát hiện về mức quan trọng của biến thành một liên hệ có tử số, mẫu số và khoảng bất định cụ thể. Nhóm không sử dụng nó làm mô hình dự báo hoàn chỉnh: không có tập kiểm tra độc lập, không điều chỉnh khác biệt giữa ngành hay tải học tập, và số học phần đạt chỉ có sau học kỳ. Mốc 6 không thể coi là chuẩn chung vì số học phần đăng ký khác nhau giữa chương trình."),
+            P("Phân tích nhạy cảm: nếu bỏ Enrolled khỏi mẫu số, tỷ lệ trong bốn nhóm trở thành 88,10%, 96,70%, 44,47% và 11,48%. Thứ tự hai nhóm đầu đổi, cho thấy định nghĩa quần thể và cách xử lý Enrolled có ảnh hưởng rõ. Vì vậy hình chính giữ cả ba nhãn và gọi trục tung là tỷ lệ mang nhãn Dropout; không tự chuyển Enrolled thành chắc chắn Graduate. Các giá trị kiểm tra nhạy cảm cũng được lưu trong CSV."),
+            P("Dữ liệu công khai không đủ ngày rời học để xác lập chắc chắn mọi sinh viên còn theo học tại cuối học kỳ 1. Một số kết quả bằng 0 có thể gắn với quá trình đã rời học, nhưng không thể kết luận cho từng người từ bảng này. Đây là giới hạn quan trọng nếu muốn phát triển nghiên cứu cảnh báo theo thời gian. Khoảng Wilson không bao hàm sai lệch chọn mẫu, khác biệt cơ sở hoặc bất định về thời điểm này.")
+        ]),
+        ("8 Đánh giá phản biện và hướng phát triển", [
+            T("Bảng 6. Đánh giá của nhóm về công trình", ["Khía cạnh", "Điểm mạnh", "Giới hạn và hướng khắc phục"], [
+                ["Minh bạch dữ liệu", "Toàn văn, DOI, dữ liệu và mô tả quy trình công khai", "Cần ghi phiên bản và từ điển mã; không mặc định các kho hoàn toàn giống nhau"],
+                ["Phân tích khám phá", "Có phân bố lớp, tương quan và mức quan trọng biến", "Phân bố/correlation không chứng minh nhân quả; cần đối chiếu loại biến"],
+                ["Tính tái lập mô hình", "Nêu họ thuật toán và F1", "Cần thêm chia tập, siêu tham số, trung bình F1 và dự đoán để tái lập đầy đủ"],
+                ["Giá trị ứng dụng", "Bài toán giáo dục có ý nghĩa và dễ làm đối chứng", "Một cơ sở Bồ Đào Nha; chưa chứng minh hiệu quả ở Việt Nam"],
+                ["Cảnh báo sớm", "Có các nhóm biến theo học kỳ", "Phải khóa thời điểm đầu vào và xác lập tập sinh viên còn nguy cơ tại mốc dự báo"]
+            ]),
+            P("Hướng nghiên cứu tiếp theo của nhóm là so sánh một tập biến tuyển sinh T0 với T1 có thêm sáu biến học kỳ 1, dùng cùng chỉ số dòng chia tập. Tất cả biến học kỳ 2 được loại; các biến học phí chưa có thời điểm rõ không nằm trong phân tích chính. Đối chứng là lớp đa số, Logistic Regression và Random Forest. Đánh giá dùng macro-F1, recall Dropout, precision và ma trận nhầm lẫn; việc chọn ngưỡng chỉ thực hiện trên tập xác thực."),
+            P("Đề xuất này nối trực tiếp kết quả đọc bài và Hình 3 với bài thuyết minh cuối kỳ. Nó nhằm kiểm tra giá trị thông tin bổ sung trong phạm vi dữ liệu hồi cứu, không cam kết một mức accuracy, không tuyên bố thuật toán mới và chưa triển khai vào quyết định học vụ. Nhóm cần trình bày cả kết quả không cải thiện nếu thí nghiệm sau này cho thấy như vậy.")
+        ]),
+        ("9 Tái lập và trách nhiệm học thuật", [
+            P("Mã MaNguon/phan_tich_va_ve_hinh.py đọc tệp CSV nguồn, kiểm tra kích thước và ba lớp, tính tần số, gán nhóm số học phần đạt, tính khoảng Wilson rồi tạo ba hình dạng PDF vector. Báo cáo dùng bản PNG được kết xuất từ chính ba PDF này để chèn vào Word. Không dùng ảnh bài gốc thay cho hình vẽ lại. HinhVaSoLieu chứa bảng CSV và kiem_tra_so_lieu.json để đối chiếu; SHA-256 lưu lại dấu vân tay tệp đầu vào."),
+            P("Để chạy lại, dùng Python 3.10 trở lên với ReportLab và chạy lệnh python MaNguon/phan_tich_va_ve_hinh.py trong thư mục bài làm. Trên Windows mã tìm Arial trong thư mục Fonts; trên Linux dùng DejaVu Sans. Các bước tính số liệu dùng thư viện chuẩn csv, collections và math. Không cần mạng sau khi đã có data.csv. Mã không gọi dịch vụ mô hình, không huấn luyện và không tạo dữ liệu ngẫu nhiên."),
+            P("AI được sử dụng để hỗ trợ tổng hợp, lập trình và trình bày. Những con số được đưa vào báo cáo đã được đối chiếu với dữ liệu hoặc vị trí nguồn nêu rõ; các nhận xét của nhóm được phân biệt với kết luận của tác giả. Khi bảo vệ, các thành viên cần giải thích được mẫu số của từng tỷ lệ, lý do giữ Enrolled, công thức Wilson và khác biệt giữa dữ liệu mô tả với đánh giá dự báo. Các bảng dự kiến ở đề cương cuối kỳ không được đọc như kết quả thực nghiệm đã có.")
+        ])
+    ]
+
+REFERENCES = [
+    "[1] V. Realinho, J. Machado, L. Baptista, and M. V. Martins, ‘Predicting Student Dropout and Academic Success,’ Data, vol. 7, no. 11, art. 146, 2022, doi: 10.3390/data7110146. Available: https://doi.org/10.3390/data7110146.",
+    "[2] V. Realinho, M. Vieira Martins, J. Machado, and L. Baptista, ‘Predict Students’ Dropout and Academic Success,’ UCI Machine Learning Repository, 2021, doi: 10.24432/C5MC89. Available: https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success. Accessed: Oct. 22, 2026.",
+    "[3] Elsevier, ‘Serial metadata: Data, ISSN 2306-5729,’ Scopus source ID 21100924372. Available: https://www.scopus.com/sourceid/21100924372. API: https://api.elsevier.com/content/serial/title/issn/23065729. Accessed: Oct. 22, 2026.",
+    "[4] MDPI, ‘Data — History.’ Available: https://www.mdpi.com/journal/data/history. Accessed: Oct. 22, 2026.",
+    "[5] MDPI, ‘Data — Journal Statistics.’ Available: https://www.mdpi.com/journal/data/stats. Accessed: Oct. 22, 2026.",
+    "[6] SCImago, ‘Data — Journal profile,’ source ID 21100924372, Subject Area and Category. Available: https://www.scimagojr.com/journalsearch.php?q=21100924372&tip=sid. Accessed: Oct. 22, 2026; đối chiếu ảnh chụp phần phân loại lưu kèm báo cáo.",
+    "[7] E. B. Wilson, ‘Probable Inference, the Law of Succession, and Statistical Inference,’ Journal of the American Statistical Association, vol. 22, no. 158, pp. 209–212, 1927, doi: 10.1080/01621459.1927.10502953."
+]

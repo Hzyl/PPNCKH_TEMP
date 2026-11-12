@@ -1,0 +1,50 @@
+Title: site:scimagojr.com "Data" "Computer Science Applications" - Bing
+
+URL Source: https://www.bing.com/search?q=site:scimagojr.com%20%22Data%22%20%22Computer%20Science%20Applications%22
+
+Markdown Content:
+About 16,400 results
+
+1.   ## [Understand **data** concepts - Training | Microsoft Learn](https://www.bing.com/ck/a?!&&p=4265930ad50fb1a324fbc3301ff02f5221462b3914e0acbe9d4c0cc892ec9e68JmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3RyYWluaW5nL3BhdGhzL3VuZGVyc3RhbmQtZGF0YS1jb25jZXB0cy8&ntb=1)
+
+Data is key to most business operations and services and an understanding of data is essential in many roles. This learning path …
+
+2.   ## [**Microsoft Edge**, browsing **data**, and privacy | **Microsoft** Support](https://www.bing.com/ck/a?!&&p=be0a452af04cb197dee11cc35ce8d19d1725b76f1327e830cf542e92b25f0ec0JmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMvZWRnZS9taWNyb3NvZnQtZWRnZS1icm93c2luZy1kYXRhLWFuZC1wcml2YWN5&ntb=1)
+
+Microsoft Edge helps you browse, search, shop online, and more. Like all modern browsers, Microsoft Edge lets you collect and …
+
+3.   ## [Get started with **data** concepts - Training | Microsoft Learn](https://www.bing.com/ck/a?!&&p=e621a491e5bdace54efce867a6b986841a280319b75f58771a8c2cedf2a760f6JmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3RyYWluaW5nL21vZHVsZXMvZ2V0LXN0YXJ0ZWQtZGF0YS1jb25jZXB0cy8&ntb=1)
+
+Businesses rely on data. Understanding data is key to many business operations. This module covers what data is, when to sort and …
+
+4.   ## [**Filter data** in a range or table in **Excel** | **Microsoft** Support](https://www.bing.com/ck/a?!&&p=4e1a3a83432b1b75a3494e2a50684cb6fa9dc538d9bbe80f8ee145b05b334131JmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMvZXhjZWwvZ2V0LXN0YXJ0ZWQvZmlsdGVyLWRhdGEtaW4tYS1yYW5nZS1vci10YWJsZS1pbi1leGNlbA&ntb=1)
+
+How to use AutoFilter in Excel to find and work with a subset of data in a range of cells or table.
+
+5.   ## [Microsoft Docs](https://www.bing.com/ck/a?!&&p=89442e898461f8bb0dd4d010e84ad9075e3aa22e7a17b7ba0bf5ceeeb7d377bfJmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vYXBpL3NlYXJjaD9zZWFyY2g9Y2hhbmdlKyU1QmFzc3dvcmQmbG9jYWxlPWVuLXVz&ntb=1)
+
+Each change record includes the row data along with metadata that indicates whether the row was inserted, updated, or deleted.
+
+6.   ## [Microsoft Docs](https://www.bing.com/ck/a?!&&p=1c695a9c61c4d9ad10c232218203c4eec8e8c243a1edd01ff3cedbe3e1f74801JmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vYXBpL3NlYXJjaD9zZWFyY2g9d2hhdCtkb2VzK3RoaXMrbWVhbiUzRisraGVsbG8rc2lyIStxdWljayt1cGRhdGUlMkMrTWljcm9zb2Z0K2NhbXBhaWducyt3ZXJlK2J1aWxkK291dCtlYXJsaWVyK3RoaXMrd2VlaythbmQrYXJlK2FscmVhZHkrZmlyaW5nK29mZitpbXByZXNzaW9ucyZsb2NhbGU9ZW4tdXM&ntb=1)
+
+With FIDO/WebAuthn, Windows Hello can also be used to sign in to supported websites, reducing the.","descriptions": [ …
+
+7.   ## [Import and analyze **data** | **Microsoft** Support](https://www.bing.com/ck/a?!&&p=a947c45d448ba022fd10a4a9c16cf50a2ce290db7860c013f0ea2a263aa82a8fJmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMvZXhjZWwvaW1wb3J0LWFuZC1hbmFseXplLWRhdGE&ntb=1)
+
+PivotTables Data models You can use Power Query (formerly called Get & Transform) experience to connect to multiple data …
+
+8.   ## [Explore Core **Data** Concepts - Training | Microsoft Learn](https://www.bing.com/ck/a?!&&p=28240813190f1d456637a6ea23c02b93cdadfa7301cdcf0e30aa11a9775587b2JmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3RyYWluaW5nL21vZHVsZXMvZXhwbG9yZS1jb3JlLWRhdGEtY29uY2VwdHMv&ntb=1)
+
+Data powers the digital transformation that is sweeping across organizations and society in general. But what is "data", and how is it …
+
+9.   ## [Guidelines for organizing and formatting **data** on a worksheet](https://www.bing.com/ck/a?!&&p=de0e71ed4c0f266ae6e35e56399dd6cb24fbd98c519b9661f82bf02dbc983f6aJmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMvZXhjZWwvZ3VpZGVsaW5lcy1mb3Itb3JnYW5pemluZy1hbmQtZm9ybWF0dGluZy1kYXRhLW9uLWEtd29ya3NoZWV0&ntb=1)
+
+Data that is defined by the table can be manipulated independently of data outside of the table, and you can use specific table …
+
+10.   ## [**Sort data** in a range or table in **Excel** | **Microsoft** Support](https://www.bing.com/ck/a?!&&p=dfc34370eb487a5648a4c72e3e9fe45c69863794a873cc0a5029e7d18a84c486JmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMvZXhjZWwvc29ydC1kYXRhLWluLWEtcmFuZ2Utb3ItdGFibGUtaW4tZXhjZWw&ntb=1)
+
+How do I sort data in a range? How do I sort case-sensitive text? Simplify sorting data in a range or table with Copilot. Sorting data is …
+
+11.   ## [Enter and format **data** | **Microsoft** Support](https://www.bing.com/ck/a?!&&p=b04e9f6b88037f157ca3ae32fd7f61ceeb3ba5c0a4cf9e408cd75ce0afb1fe81JmltdHM9MTc5MjU0MDgwMA&ptn=3&ver=2&hsh=4&fclid=3821d4bc-4136-626f-3637-c34640366307&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMvZXhjZWwvZW50ZXItYW5kLWZvcm1hdC1kYXRh&ntb=1)
+
+Consolidate data in multiple worksheets Rows and columns Insert or delete cells, rows, and columns Hide or show rows or columns …

@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "midterm_unchanged": true,
+    "five_distinct_full_papers": true,
+    "source_hashes_and_pages": true,
+    "dataset_shape": true,
+    "dataset_labels": true,
+    "no_empty_or_exact_duplicate": true,
+    "p2_confusion_matrix": true,
+    "five_chapters": true,
+    "five_papers_compared": true,
+    "eight_vertical_criteria": true,
+    "five_members": true,
+    "planned_not_fabricated": true,
+    "pdf_18_pages": true,
+    "one_landscape_page": true,
+    "no_field_errors": true,
+    "toc_updated": true,
+    "template_style_properties": true,
+    "template_doc_defaults": true,
+    "template_file_unchanged": true,
+    "no_decorative_table_fills": true,
+    "png_review_complete": true,
+    "old_final_backed_up": true
+  },
+  "style_checks": {
+    "Normal": true,
+    "Heading1": true,
+    "Heading2": true,
+    "Heading3": true,
+    "Caption": true,
+    "TOC1": true,
+    "TOC2": true
+  },
+  "pages": 18,
+  "artifacts": {
+    "PPNCKH_3123411114_3123411120_3123411144_3123411151_3123411064.docx": {
+      "bytes": 54126,
+      "sha256": "f5f0da021daa0558bd9c7002d137b8a95591626abf2eefed3e2a89c76d78ff9d"
+    },
+    "PPNCKH_3123411114_3123411120_3123411144_3123411151_3123411064.pdf": {
+      "bytes": 347995,
+      "sha256": "42856b8763ea7dfb190cc7cb9f64b98a67b4758ed561c397c7e8d0139f84ec9d"
+    }
+  },
+  "dataset_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+  "visual_review": "All 18 final page images inspected by assistant; no clipping or overlap observed. Page before landscape table retains whitespace for orientation change.",
+  "renderer": "Word COM and Poppler; packaged renderer attempted and unavailable because soffice.exe is absent.",
+  "experiments": "Not run; report is literature review and proposed protocol."
+}

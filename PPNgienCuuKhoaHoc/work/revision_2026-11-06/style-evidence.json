@@ -1,0 +1,27 @@
+{
+  "template": "C:\\Users\\ASUS\\OneDrive\\Documents\\Custom Office Templates\\style_word_dang_bao_cao.dotx",
+  "sha256": "44806144da1feaf17508d64e925aece25ae50d7f743a6489acb1974fd58684f9",
+  "imported_styles": [
+    "Normal",
+    "Heading1",
+    "Heading2",
+    "Heading3",
+    "Heading4",
+    "Heading1Char",
+    "Heading2Char",
+    "Heading3Char",
+    "Heading4Char",
+    "Caption",
+    "TOC1",
+    "TOC2",
+    "TOC3",
+    "TOC4",
+    "TOC5",
+    "TOC6",
+    "TOC7",
+    "TOC8",
+    "TOC9"
+  ],
+  "body": "Times New Roman 13; line 1.3; before/after 6 pt; first line 1.27 cm",
+  "exceptions": "Accepted cover retained; tables have zero first-line indent and compact readable spacing; front-matter Title retained; existing A4 page geometry retained."
+}

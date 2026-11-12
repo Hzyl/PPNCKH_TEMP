@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-22",
+  "journal": "Data",
+  "issn": "2306-5729",
+  "paper_doi": "10.3390/data7110146",
+  "scopus": {
+    "status": "verified_official_serial_api_and_publisher_history",
+    "source_id": "21100924372",
+    "official_url": "https://www.scopus.com/sourceid/21100924372",
+    "api_url": "https://api.elsevier.com/content/serial/title/issn/23065729?httpAccept=application%2Fjson",
+    "local_evidence": "TaiLieuNguon/evidence-scopusapi.html",
+    "api_excerpt": "dc:title=Data; dc:publisher=Multidisciplinary Digital Publishing Institute (MDPI); prism:eIssn=2306-5729; scopus-source=https://www.scopus.com/source/sourceInfo.url?sourceId=21100924372",
+    "publisher_history": "2019: Data was indexed in Scopus (Elsevier), starting with Volume 1 (Issue 1).",
+    "history_url": "https://www.mdpi.com/journal/data/history",
+    "history_evidence": "TaiLieuNguon/evidence-jina-history.txt"
+  },
+  "web_of_science": {
+    "status": "publisher_confirmed_ESCI_not_SCI_expanded",
+    "excerpt": "2017: Data was indexed in Emerging Sources Citation Index (ESCI)—Web of Science, starting with Volume 2 (Issue 1).",
+    "url": "https://www.mdpi.com/journal/data/history",
+    "indexing_url": "https://www.mdpi.com/journal/data/indexing",
+    "local_evidence": "TaiLieuNguon/evidence-jina-index.txt"
+  },
+  "dated_metric": {
+    "metric": "CiteScore",
+    "value": 2.1,
+    "metric_year": 2019,
+    "announced_year": 2020,
+    "url": "https://www.mdpi.com/journal/data/history",
+    "excerpt": "2020 Data received its first CiteScore (2019) of 2.1.",
+    "local_evidence": "TaiLieuNguon/evidence-jina-history.txt",
+    "caution": "Historical metric with explicit reference year, not a 2022 metric or current metric. Prefer this if rubric requires a dated metric."
+  },
+  "current_display_metrics": {
+    "impact_factor": 2.4,
+    "five_year_impact_factor": 2.5,
+    "citescore": 5.4,
+    "display_checked_at": "2026-10-22",
+    "metric_reference_year": null,
+    "url": "https://www.mdpi.com/journal/data/stats",
+    "local_evidence": "TaiLieuNguon/evidence-jina-stats.txt",
+    "caution": "Retrieved publisher page displays values and Data as of 22 October 2026, but does not expose metric reference year in retrieved text. Do not label these as 2024, 2025, or 2022 metrics."
+  },
+  "scimago_field": {
+    "status": "resolved_from_user_supplied_screenshot",
+    "url": "https://www.scimagojr.com/journalsearch.php?q=21100924372&tip=sid",
+    "issn_lookup_url": "https://www.scimagojr.com/journalsearch.php?q=23065729&tip=iss",
+    "retrieval_history": "Direct retrieval was blocked; the user supplied the Subject Area and Category screenshot in response to this exact journal link.",
+    "local_evidence": "TaiLieuNguon/scimago-subject-user.png",
+    "subject_areas": {
+      "Computer Science": ["Computer Science Applications", "Information Systems"],
+      "Decision Sciences": ["Information Systems and Management"]
+    },
+    "limitation": "The cropped screenshot supports the displayed subject taxonomy. It does not independently show the journal title, year, SJR score or quartile. Its association with Data comes from the user's response to the supplied Data journal link."
+  },
+  "publisher_citescore_categories": {
+    "source": "MDPI statistics; these are NOT verified SCImago categories",
+    "categories": ["Information Systems and Management", "Information Systems", "Computer Science Applications"],
+    "url": "https://www.mdpi.com/journal/data/stats",
+    "local_evidence": "TaiLieuNguon/evidence-jina-stats.txt"
+  },
+  "retrieval_method": "Elsevier serial metadata fetched directly. MDPI pages retrieved through public Jina Reader because direct MDPI HTTP requests returned 403. Source URL and raw fetched text retained. No authentication or paywall bypass.",
+  "open_requirement": null,
+  "resolution": "User supplied the requested SCImago taxonomy screenshot; the midterm cites and embeds that screenshot. No unverified SJR quartile is asserted."
+}
